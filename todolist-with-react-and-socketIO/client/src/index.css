@@ -118,6 +118,9 @@
 .comment {
 	margin-bottom: 5px;
 }
+.btn {
+	background-color: #853325;
+}
 .comment__form > button {
 	padding: 15px 20px;
 	cursor: pointer;

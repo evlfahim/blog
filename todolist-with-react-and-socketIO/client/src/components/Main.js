@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Modal from "./Modal";
 import Nav from "./Nav";
+import Checkbox from "./Checkbox";
 
 function Main({ socket }) {
 	const [todo, setTodo] = useState("");
@@ -56,7 +57,7 @@ function Main({ socket }) {
 			<div className='todo__container'>
 				{todoList.map((item) => (
 					<div className='todo__item' key={item.id}>
-						<p>{item.todo}</p>
+						<Checkbox label="" /><p>{item.todo}</p>
 						<div>
 							<button
 								className='commentsBtn'

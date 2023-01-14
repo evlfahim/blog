@@ -35,7 +35,12 @@ const Modal = ({ showModal, setShowModal, selectedItemID, socket }) => {
 						onChange={(e) => setComment(e.target.value)}
 						required
 					/>
-					<button>Add Comment</button>
+					{comments.length > 0 ? (
+						<button className='btn'>Add Comment!</button>
+					) : (
+						<button>Add Comment</button>
+					)}
+					
 				</form>
 				<div className='comments__container'>
 					{comments.length > 0 ? (
@@ -47,7 +52,7 @@ const Modal = ({ showModal, setShowModal, selectedItemID, socket }) => {
 							</div>
 						))
 					) : (
-						<p>No comments available yet...</p>
+						<p>No comments...</p>
 					)}
 				</div>
 			</div>
